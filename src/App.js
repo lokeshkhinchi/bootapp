@@ -1,24 +1,20 @@
 import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import LefrMenu from './components/LeftMenu';
+import MainContent from './components/MainContent';
+import { BrowserRouter as Router, Switch, Route, withRouter, useHistory, Redirect } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import LogIn from './components/LogIn';
 
-function App() {
+const App = () => {
+  const history = useHistory();
+  let userData = sessionStorage.getItem('sessionData');
+  //!userData && history.push('/log-in')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <Route path='/' component={Dashboard} />
+      <Route path='/log-in' component={LogIn} />
+    </Router>
   );
 }
 
