@@ -9,6 +9,7 @@ import Products from "./Products";
 import Users from './Users';
 import UserDetail from './UserDetail';
 import AddProduct from './AddProduct';
+import EditProduct from './EditProduct';
 
 const MainContent = () => {
 
@@ -21,6 +22,7 @@ const MainContent = () => {
     <Route path="/work" component={Work} />
     <Route path="/products" component={Products} />
     <Route path="/product/add" component={AddProduct} />
+    <Route path="/product/:id/edit" component={EditProduct} />
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />
     <Route path="/contact" component={Contact} />

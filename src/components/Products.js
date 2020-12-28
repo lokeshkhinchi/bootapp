@@ -48,7 +48,7 @@ class Products extends Component {
               </ListGroup>
               <Card.Body>
                 <Link to={`/product/${product.id}`} className="card-link">View</Link>
-                <Card.Link href="#">Edit</Card.Link>
+                <Link to={`/product/${product.id}/edit`} className="card-link">Edit</Link>
                 <Card.Link href="#">Delete</Card.Link>
               </Card.Body>
             </Card>
