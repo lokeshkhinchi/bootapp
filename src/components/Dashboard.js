@@ -7,9 +7,8 @@ import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router
 const Dashboard = () => {
   const history = useHistory();
   let userData = sessionStorage.getItem('sessionData');
-  !userData && history.push('/log-in')
+  !userData && history.push('/log-in');
   userData = JSON.parse(userData);
-  
   
   return (
     <>

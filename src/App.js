@@ -12,8 +12,10 @@ const App = () => {
   //!userData && history.push('/log-in')
   return (
     <Router history={history}>
-      <Route path='/' component={Dashboard} />
-      <Route path='/log-in' component={LogIn} />
+      <Switch>
+        <Route path='/log-in' component={LogIn} />
+        <Route path='/' component={Dashboard} />
+      </Switch>
     </Router>
   );
 }
