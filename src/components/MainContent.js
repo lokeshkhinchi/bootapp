@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Products from "./Products";
 import Users from './Users';
 import UserDetail from './UserDetail';
+import AddProduct from './AddProduct';
 
 const MainContent = () => {
 
@@ -19,6 +20,7 @@ const MainContent = () => {
     <Route path="/services" component={Services} />
     <Route path="/work" component={Work} />
     <Route path="/products" component={Products} />
+    <Route path="/product/add" component={AddProduct} />
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />
     <Route path="/contact" component={Contact} />

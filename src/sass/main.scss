@@ -71,3 +71,16 @@ nav.mian-nav {
 .mian-nav > a:hover, .mian-nav > a:focus {
   background-color: #ddd;
 }
+
+.form-wrap {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.form-title {
+  margin-bottom: $spacer;
+  //text-align: center;
+  font-size: $font-size-base * 2;
+}

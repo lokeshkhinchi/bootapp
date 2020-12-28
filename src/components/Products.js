@@ -16,7 +16,7 @@ class Products extends Component {
     axios.get('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products')
     .then(response => {
       console.log(response);
-      this.setState({products: response.data})
+      this.setState({products: response.data.reverse()})
     })
     .catch(error => {
       console.log(error);
@@ -27,7 +27,10 @@ class Products extends Component {
     const { products } = this.state;
     return (
       <>
-      <h1 className="mb-5">List of Profucts</h1>
+      <h1 className="mb-5">List of Profucts
+      <Link to="/product/add" className="float-right">Add Product</Link>
+      </h1>
+      
       <Row>
         {
           products.length ?
