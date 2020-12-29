@@ -1,0 +1,1 @@
+//!userData && history.push('/log-in')
