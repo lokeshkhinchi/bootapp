@@ -24,7 +24,7 @@ const Products = () => {
   return (
     <>
     <h1 className="mb-5">List of Profucts
-    <Link to="/product/add" className="float-right">Add Product</Link>
+    <Link to="/products/add" className="float-right">Add Product</Link>
     </h1>
     
     <Row>

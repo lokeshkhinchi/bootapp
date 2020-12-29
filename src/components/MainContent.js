@@ -21,10 +21,11 @@ const MainContent = () => {
     <Route path="/about" component={About} />
     <Route path="/services" component={Services} />
     <Route path="/work" component={Work} />
-    <Route path="/products" component={Products} />
-    <Route path="/product/:id" component={ProductDetail} />
-    <Route path="/product/add" component={AddProduct} />
-    <Route path="/product/:id/edit" component={EditProduct} />
+    <Route path="/products" exact component={Products} />
+    <Route path="/products/add" exact component={AddProduct} />
+    <Route path="/product/:id" exact component={ProductDetail} />
+    
+    <Route path="/product/:id/edit" exact component={EditProduct} />
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />
     <Route path="/contact" component={Contact} />
