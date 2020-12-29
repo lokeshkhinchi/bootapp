@@ -44,7 +44,7 @@ const Products = () => {
             </ListGroup>
             <Card.Body>
               <Link to={`/product/${product.id}`} className="card-link">View</Link>
-              <Link to={`/product/${product.id}/edit`} className="card-link">Edit</Link>
+              <Link to={`/product/${product.id}/edit?title=${product.title}&description=${product.description}&price=${product.price}`} className="card-link">Edit</Link>
               <Link className="card-link" onClick={() => deleteProduct(product.id)}>Delete</Link>
             </Card.Body>
           </Card>

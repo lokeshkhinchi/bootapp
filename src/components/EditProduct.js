@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams, useLocation } from 'react-router-dom';
 
 const EditProduct = () => {
 
   const { id } = useParams();
 
   useEffect(() => {
+    console.log(product);
     fetchProduct();
   }, [])
 
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+  let query = useQuery();
+  
   let history = useHistory();
   const [ product, setProduct ] = useState({
-    title: '',
-    description: '',
-    price: ''
+    title: query.get("title"),
+    description: query.get("description"),
+    price: query.get("price")
   });
 
   const inputChangeHandler = (e) => {
