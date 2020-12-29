@@ -32,7 +32,7 @@ const Header = props => {
         </div>
 
         <Navbar.Text>
-          Signed in as: <a href="#login">{userName}</a>
+          Signed in as: <strong>{userName}</strong>
         </Navbar.Text>
 
         <div className="nav-item d-none d-lg-block ml-4">
