@@ -1,7 +1,9 @@
 import {
   FETCH_SERVICES_REQUEST,
   FETCH_SERVICES_SUCCESS,
-  FETCH_SERVICES_FAILURE
+  FETCH_SERVICES_FAILURE,
+  POST_SERVICE_REQUEST,
+  POST_SERVICE_FAILURE
 } from './serviceTypes'
 
 const initialState = {
@@ -31,6 +33,15 @@ const reducer = (state = initialState, action) => {
         services: [],
         error: action.payload
       }
+
+    case POST_SERVICE_REQUEST:
+      const services = state.services.concat(action.payload);
+      return {
+        ...state,
+        services: services,
+        error: ''
+      }
+
     default: return state
   }
 }

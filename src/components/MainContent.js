@@ -13,6 +13,7 @@ import UserDetail from './UserDetail';
 import ProductDetail from './ProductDetail';
 import AddProduct from './AddProduct';
 import EditProduct from './EditProduct';
+import AddService from './AddService';
 
 const MainContent = () => {
 
@@ -22,12 +23,14 @@ const MainContent = () => {
     <Route path="/" exact component={Home} />
     <Route path="/home" exact component={Home} />
     <Route path="/about" component={About} />
+
     <Route path="/services" component={Services} />
+    <Route path="/service/add" component={AddService} />
+
     <Route path="/work" component={Work} />
     <Route path="/products" exact component={Products} />
     <Route path="/products/add" exact component={AddProduct} />
     <Route path="/product/:id" exact component={ProductDetail} />
-    
     <Route path="/product/:id/edit" exact component={EditProduct} />
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />

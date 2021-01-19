@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchServices } from '../redux';
 import { Button, Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 
 function Services({ serviceData, fetchServices }) {
 
@@ -14,7 +15,11 @@ function Services({ serviceData, fetchServices }) {
     <h2>{serviceData.error}</h2>
   ) : (
     <>
-    <h2 className="mb-4">Services List</h2>
+    <h2 className="mb-4">
+      Services List
+      <Link to="/service/add" className="float-right">Add Service</Link>
+    </h2>
+    
     <div className="row">
       {serviceData 
       && serviceData.services && 
