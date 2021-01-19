@@ -19,7 +19,7 @@ const ProductDetail = () => {
   });
 
   const fetchProduct = async userId => {
-    const fetchProduct =  await axios.get(`https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products/${id}`);
+    const fetchProduct =  await axios.get(`https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/employees/1/products/${id}`);
     setProduct(fetchProduct.data);
   }
 

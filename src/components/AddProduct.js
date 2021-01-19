@@ -17,12 +17,12 @@ const AddProduct = () => {
 
   const formSubmit = async e => {
     e.preventDefault();
-    await axios.post('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products', product);
+    await axios.post('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/employees/1/products', product);
     history.push('/products');
   }
 
   const postProduct = async e => {
-    await axios.post('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products', product);
+    await axios.post('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/employees/1/products', product);
   }
 
   const clearState = () => {

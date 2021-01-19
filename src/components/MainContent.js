@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
@@ -16,6 +18,7 @@ const MainContent = () => {
 
   return (
     <>
+    <Provider store={store}>
     <Route path="/" exact component={Home} />
     <Route path="/home" exact component={Home} />
     <Route path="/about" component={About} />
@@ -29,6 +32,8 @@ const MainContent = () => {
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />
     <Route path="/contact" component={Contact} />
+
+    </Provider>
     </>
   )
 }

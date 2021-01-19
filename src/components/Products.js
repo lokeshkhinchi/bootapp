@@ -12,12 +12,12 @@ const Products = () => {
   }, []);
 
   const fetchProducts = async () => {
-    const fetchProducts = await axios.get('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products');
+    const fetchProducts = await axios.get('https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/employees/1/products');
     setProducts(fetchProducts.data.reverse());
   }
 
   const deleteProduct = async id => {
-    await axios.delete(`https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/products/${id}`);
+    await axios.delete(`https://5fe8bc5c2e12ee0017ab4a43.mockapi.io/employees/1/products/${id}`);
     fetchProducts();
   }
 
