@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/bootapp/static/css/main.c8be8edc.chunk.css",
-    "main.js": "/bootapp/static/js/main.717c8b08.chunk.js",
-    "main.js.map": "/bootapp/static/js/main.717c8b08.chunk.js.map",
+    "main.js": "/bootapp/static/js/main.6c31a517.chunk.js",
+    "main.js.map": "/bootapp/static/js/main.6c31a517.chunk.js.map",
     "runtime-main.js": "/bootapp/static/js/runtime-main.4032bfc0.js",
     "runtime-main.js.map": "/bootapp/static/js/runtime-main.4032bfc0.js.map",
-    "static/js/2.d3f94c40.chunk.js": "/bootapp/static/js/2.d3f94c40.chunk.js",
-    "static/js/2.d3f94c40.chunk.js.map": "/bootapp/static/js/2.d3f94c40.chunk.js.map",
+    "static/js/2.ad73ee68.chunk.js": "/bootapp/static/js/2.ad73ee68.chunk.js",
+    "static/js/2.ad73ee68.chunk.js.map": "/bootapp/static/js/2.ad73ee68.chunk.js.map",
     "static/js/3.8fdb6545.chunk.js": "/bootapp/static/js/3.8fdb6545.chunk.js",
     "static/js/3.8fdb6545.chunk.js.map": "/bootapp/static/js/3.8fdb6545.chunk.js.map",
     "index.html": "/bootapp/index.html",
     "static/css/main.c8be8edc.chunk.css.map": "/bootapp/static/css/main.c8be8edc.chunk.css.map",
-    "static/js/2.d3f94c40.chunk.js.LICENSE.txt": "/bootapp/static/js/2.d3f94c40.chunk.js.LICENSE.txt",
-    "static/js/main.717c8b08.chunk.js.LICENSE.txt": "/bootapp/static/js/main.717c8b08.chunk.js.LICENSE.txt",
+    "static/js/2.ad73ee68.chunk.js.LICENSE.txt": "/bootapp/static/js/2.ad73ee68.chunk.js.LICENSE.txt",
+    "static/js/main.6c31a517.chunk.js.LICENSE.txt": "/bootapp/static/js/main.6c31a517.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/bootapp/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4032bfc0.js",
-    "static/js/2.d3f94c40.chunk.js",
+    "static/js/2.ad73ee68.chunk.js",
     "static/css/main.c8be8edc.chunk.css",
-    "static/js/main.717c8b08.chunk.js"
+    "static/js/main.6c31a517.chunk.js"
   ]
 }
