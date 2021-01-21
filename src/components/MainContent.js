@@ -14,6 +14,7 @@ import ProductDetail from './ProductDetail';
 import AddProduct from './AddProduct';
 import EditProduct from './EditProduct';
 import AddService from './AddService';
+import EditService from './EditService';
 
 const MainContent = () => {
 
@@ -24,8 +25,9 @@ const MainContent = () => {
     <Route path="/home" exact component={Home} />
     <Route path="/about" component={About} />
 
-    <Route path="/services" component={Services} />
-    <Route path="/service/add" component={AddService} />
+    <Route path="/services" exact component={Services} />
+    <Route path="/service/add" exact component={AddService} />
+    <Route path="/service/:id/edit" exact component={EditService} />
 
     <Route path="/work" component={Work} />
     <Route path="/products" exact component={Products} />

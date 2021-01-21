@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchServices } from '../redux';
+import { fetchServices, deleteService } from '../redux';
 import { Button, Card, ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 
-function Services({ serviceData, fetchServices }) {
+function Services({ serviceData, fetchServices, deleteService}) {
 
   useEffect(() => {
     fetchServices()
@@ -22,9 +22,9 @@ function Services({ serviceData, fetchServices }) {
     
     <div className="row">
       {serviceData 
-      && serviceData.services && 
+      && serviceData.services.length > 0 && 
       serviceData.services.map(service => (
-        <div kay={service.id} className="col-lg-3 col-md-4 col-sm-6">
+        <div key={service.id} className="col-lg-3 col-md-4 col-sm-6">
           <Card className="mb-4">
             <Card.Img variant="top" src={service.image} />
             <Card.Body>
@@ -32,7 +32,8 @@ function Services({ serviceData, fetchServices }) {
               <Card.Text>
                 {service.description}
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Link to={`/service/${service.id}/edit?title=${service.title}&description=${service.description}`} className="btn btn-primary">Edit</Link>
+              <Link to="/services/" className="btn btn-danger ml-4" onClick={() => deleteService(service.id)}>Delete</Link>
             </Card.Body>
           </Card>
         </div>
@@ -50,7 +51,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchServices: () => dispatch(fetchServices())
+    fetchServices: () => dispatch(fetchServices()),
+    deleteService: id => dispatch(deleteService(id))
   }
 }
 
