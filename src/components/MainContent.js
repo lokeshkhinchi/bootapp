@@ -15,6 +15,7 @@ import AddProduct from './AddProduct';
 import EditProduct from './EditProduct';
 import AddService from './AddService';
 import EditService from './EditService';
+import Chart from './Chart';
 
 const MainContent = () => {
 
@@ -37,6 +38,7 @@ const MainContent = () => {
     <Route path="/users" exact component={Users} />
     <Route path="/user/:id" component={UserDetail} />
     <Route path="/contact" component={Contact} />
+    <Route path="/chart" component={Chart} />
 
     </Provider>
     </>

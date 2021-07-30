@@ -45,6 +45,12 @@ const reducer = (state = initialState, action) => {
         services: services,
         error: ''
       }
+    
+    case POST_SERVICE_FAILURE:
+      return {
+        ...state,
+        error: action.payload
+      }
 
     case EDIT_SERVICE_REQUEST:
       const putServices = state.services.concat(action.payload);

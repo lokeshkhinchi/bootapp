@@ -17,6 +17,7 @@ class LeftMenu extends Component {
         <Link to="/products">Products</Link>
         <Link to="/users">Users</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/chart">Chart</Link>
       </nav>
       </>
     )

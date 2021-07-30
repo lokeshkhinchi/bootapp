@@ -47,6 +47,7 @@ body {
 
 section.main-content {
   width: calc(100% - 250px);
+  min-height: 100vh;
   padding: 40px;
   position: relative;
   left: 250px;
@@ -83,4 +84,20 @@ nav.mian-nav {
   margin-bottom: $spacer;
   //text-align: center;
   font-size: $font-size-base * 2;
+}
+
+.time-line-container .timeLine {
+  min-height: 600px;
+
+  .header-top {
+    border-bottom: 0;
+  }
+
+  .header-middle {
+    border-bottom: 0;
+  }
+
+  .header-bottom {
+    border-bottom: 0;
+  }
 }
